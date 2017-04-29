@@ -5,13 +5,40 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Macondo|Press+Start+2P|Roboto|Spirax" rel="stylesheet">
 <link href="/home/bridgeit/webdevlopment/style/style.css" rel="stylesheet" type="text/css">
-<body>
+<script>
+function myFunction(elmnt, clr) {
+    elmnt.style.color = clr;
+}
+
+
+
+function whichElement(e) {
+    var targ;
+    if (!e) {
+        var e = window.event;
+    }
+    if (e.target) {
+        targ=e.target;
+    } else if (e.srcElement) {
+        targ=e.srcElement;
+    }
+    var tname;
+    tname = targ.tagName;
+    alert("You clicked on a " + tname + " element.");
+}
+</script>
+
+
+</head>
+<body onmousedown="whichElement(event)">
+
 
 
 <center>
 <h1><font face="Macondo"><Hii, This is my first web page</h1>
-<h2>Hii, This is my first web page</h2>
+<h2 onmouseover="style.color='green'" onmouseout="style.color='black'">Hii, This is my first web page</h2>
 <h3>Hii, This is my first web page</h3>
+
 
 <p>I am <strong>addicted</strong> in coding, I am eager to build my own shopping website</p>
 </center>
@@ -46,12 +73,12 @@
 
 <center>
 
-<h4>Hii, This is my first web page</h4>
-<h5>Hii, This is my first web page</h5>
-<h6>Hii, This is my first web page</h6>
+<h1 onmouseover="style.color='green'" onmouseout="style.color='black'">Hii, This is my first web page</h1>
+<h1 onmousedown="myFunction(this,'green')" onmouseup="myFunction(this,'Yellow')">Hii, This is my first web page and onmouseup</h1>
+<h3>Hii, This is my first web page</h6>
 </center>
 <button>Change user</button>
 <script src="scripts/main.js"></script>
 </body>
-<head>
+
 </html>
